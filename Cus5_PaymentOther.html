@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Payments</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+  .inlineimage {
+    max-width: 470px;
+    margin-right: 8px;
+    margin-left: 10px;
+  }
+
+  .images {
+    display: inline-block;
+    max-width: 98%;
+    height: auto;
+    width: 22%;
+    margin: 1%;
+    text-align: center;
+  }
+
+  .hd {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .panel-heading h3 {
+    margin-top: 5px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+  }
+
+  .panel-footer {
+    background-color: hsl(0, 2%, 60%);
+  }
+</style>
+<link rel="stylesheet" href="css/PayOther.css">
+</head>
+<body>
+
+  <div class="container" style="margin-top: 50px;">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">
+            <div class="inlineimage">
+              <img class="img-responsive images" src="../images/bkash.png" alt="Bkash">
+              <img class="img-responsive images" src="../images/nagad.png" alt="Nagad">
+              <img class="img-responsive images" src="../images/rocket.png" alt="Rocket">
+              <a href="Cus6_PaymentCard.html"> 
+                <button class="Card btn btn-info" style="margin-top: 10px;"> 
+                  Click here to pay via Card 
+                </button> 
+              </a>
+            </div>
+            <h3>Payment App</h3>
+            <div class="text-center">
+              <input type="radio" id="bkash" name="pay_app" value="bkash">
+              <label for="bkash">Bkash</label>
+              <input type="radio" id="rocket" name="pay_app" value="rocket">
+              <label for="rocket">Rocket</label>
+              <input type="radio" id="nagad" name="pay_app" value="nagad">
+              <label for="nagad">Nagad</label>
+            </div>
+          </div>
+          <form role="form" action="reservation" method="post">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="tel" class="form-control" id="phonenumber" placeholder="Enter your phone number" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="pinnumber">Pin Number</label>
+                    <input type="password" class="form-control" id="pinnumber" placeholder="Enter your pin number" required/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <div class="row">
+                <div class="col-xs-12">
+                  <input type="submit" value="Confirm Payment" class="btn btn-success btn-lg btn-block" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

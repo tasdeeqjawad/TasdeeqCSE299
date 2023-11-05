@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ticket Reservation</title>
+    <link rel="stylesheet" href="css/Reservation.css">
+</head>
+<body>
+    <header>
+        <h1 class="hd">Train Transport System</h1>
+    </header>
+
+    <div class="booking-form-w3layouts">
+        <!-- Form starts here -->
+        <form action="/ticketreservation" method="post">
+            <h2 class="sub-heading-agileits">Ticket Reservation</h2>
+            <div class="main-flex-w3ls-sectns">
+                <div class="field-agileinfo-spc form-w3-agile-text1">
+                    <select class="form-control" name="from_station">
+                        <option>From Station</option>
+                        <option value="Dhaka1">Dhaka(Airport)</option>
+                        
+                        <option value="Dhaka2">Dhaka(Kamalapur)</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Birimari">Borimari</option>
+                        <option value="Chandpur">Chandpur</option>
+                        <option value="Kishorganj">Kishorganj</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Noakhali">Noakhali</option>
+                             </select>
+                </div>
+                <div class="field-agileinfo-spc form-w3-agile-text2">
+                    <select class="form-control" name="to_station">
+                        <option>To Station</option>
+                        <option value="Dhaka1">Dhaka(Airport)</option>
+                        
+               <option value="Dhaka2">Dhaka(Kamalapur)</option>
+               <option value="Chittagong">Chittagong</option>
+               <option value="Mymensingh">Mymensingh</option>
+               <option value="Sylhet">Sylhet</option>
+               <option value="Birimari">Borimari</option>
+               <option value="Chandpur">Chandpur</option>
+               <option value="Kishorganj">Kishorganj</option>
+               <option value="Rangpur">Rangpur</option>
+               <option value="Noakhali">Noakhali</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main-flex-w3ls-sectns">
+                <div class="field-agileinfo-spc form-w3-agile-text1">
+                    <select class="form-control" name="coach_type">
+                        <option>Preferred Coach</option>
+                        <option value="AC">AC</option>
+                        <option value="Berth">Berth</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </div>
+                <div class="field-agileinfo-spc form-w3-agile-text2">
+                    <select class="form-control" name="seating_preference">
+                        <option>Preferred Seating</option>
+                        <option value="Window">Window</option>
+                        <option value="Aisle">Aisle</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main-flex-w3ls-sectns">
+                <div class="field-agileinfo-spc form-w3-agile-text1">
+                    <input id="datepicker" name="departure_date" type="text" placeholder="Departure Date" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                </div>
+                <div class="field-agileinfo-spc form-w3-agile-text1">
+                    <input type="text" name="passenger_count" placeholder="Number of Passengers" required="">
+                </div>
+            </div>
+            <div class="triple-wthree">
+                <div class="field-agileinfo-spc form-w3-agile-text11">
+                    <select class="form-control" name="number_of_seats">
+                        <option value="">Number of Seats(Max 5)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <h3 class="sub-heading-agileits">Personal Details</h3>
+            <div class="main-flex-w3ls-sectns">
+                <div class="field-agileinfo-spc form-w3-agile-text1">
+                    <input type="text" name="full_name" placeholder="Full Name" required="">
+                </div>
+                <div class="field-agileinfo-spc form-w3-agile-text2">
+                    <input type="text" name="phone_number" placeholder="Phone Number" required="">
+                </div>
+            </div>
+            <div class="clear"></div>
+            <input type="submit" value="Proceed to Pay">
+            <input type="reset" value="Clear Form">
+            <div class="clear"></div>
+        </form>
+        <!--// Form starts here -->
+    </div>
+</body>
+</html>

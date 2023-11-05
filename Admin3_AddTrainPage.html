@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Train</title>
+<link rel="stylesheet" href="css/All.css">
+</head>
+<body>
+	<header>
+		<h1 class="hd">Train Transport System</h1>
+		<div class="home">
+			<p class="menu">
+				<a href="Admin2_HomePage.html">Home</a>
+			</p>
+		</div>
+		<br>
+		<div class="home">
+			<p class="menu">
+				<a href="Admin3_AddTrainPage.html">Add Train</a>
+			</p>
+		</div>
+		<br>
+        <div class="home">
+			<p class="menu">
+				<a href="Admin4_DeleteTrain.html">Delete Train </a>
+			</p>
+		</div>
+		<br>
+        <div class="home">
+			<p class="menu">
+				<a href="Admin1_LoginPage.html">Logout</a>
+			</p>
+		</div>
+	</header>
+	<div class='main'>
+		<p class='menu'> Add Trains </p>
+	</div>
+	<form class="tab" action="/adminaddtrain" method="post">
+		<br /> Train Number:<input type="text" name="trainno"><br />
+		<br /> Train Name: <input type="text" name="trainname"><br />
+		<br /> From Station: <input type="text" name="fromstation"><br />
+		<br /> To Station: <input type="text" name="tostation"><br />
+		<br /> Available: <input type="text" name="available"><br />
+		<br /> Fare: <input type="text" name="fare"><br />
+		<br /> <input type="submit" value=" ADD TRAIN ">
+	</form>
+	<br />
+</body>
+</html>

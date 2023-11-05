@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="css/PayCard.css">
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+        }
+
+        .main-heading {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+        }
+
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+        }
+
+        .cards {
+            max-width: 100px;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/payment" method="post">
+            <h1 class="main-heading">Pay via Card</h1>
+            <hr>
+            <h2>User Information</h2>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label for="pincode">Password:</label>
+                <input type="number" id="pincode" name="pincode">
+            </div>
+            <hr>
+            <h2>Payment Information</h2>
+            <div>
+                Accepted Cards <br>
+                <div>
+                    <img src="../images/Visa.png" alt="Visa" class="cards" id="visa">
+                    <img src="../images/Mastercard.png" alt="MasterCard" class="cards" id="mastercard">
+                </div>
+                <label for="card_type">Card Type:</label>
+                <select name="card_type" id="card_type" required>
+                    <option value="">--Select a Card Type</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                </select>
+            </div>
+            <div>
+                <label for="card_number">Card Number:</label>
+                <input type="number" id="card_number" name="card_number" placeholder="5555-6666-7777-8888" required>
+            </div>
+            <div>
+                <label for="exp_date">Expiration Date:</label>
+                <input type="date" id="exp_date" name="exp_date" required>
+            </div>
+            <div>
+                <label for="cvv">CVV(Passcode):</label>
+                <input type="password" id="cvv" name="cvv" placeholder="123">
+            </div>
+            <input type="submit" value="Pay Now">
+        </form>
+
+    </div>
+</body>
+
+</html>
